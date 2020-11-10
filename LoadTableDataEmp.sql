@@ -1,0 +1,27 @@
+--EmployeeDetails
+Insert into dbo.EmployeeDetails(EmployeeNumber,Age,DistanceFromHome,Gender,MaritalStatus,Over18)
+select EmployeeNumber,Age,DistanceFromHome,Gender,MaritalStatus,Over18 from dbo.EmployeeFullData
+
+--WorkHistory
+Insert into dbo.WorkHistory(EmployeeNumber,NumCompaniesWorked,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager,Attrition,TotalWorkingYears,PerformanceRating)
+select EmployeeNumber,NumCompaniesWorked,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager,Attrition,TotalWorkingYears,PerformanceRating from dbo.EmployeeFullData;
+
+--SurveyData
+Insert into dbo.SurveyData(EmployeeNumber,EnvironmentSatisfaction,JobInvolvement,JobISatisfaction,RelationshipSatisfaction,WorkLifeBalance)
+select EmployeeNumber,EnvironmentSatisfaction,JobInvolvement,JobISatisfaction,RelationshipSatisfaction,WorkLifeBalance from dbo.EmployeeFullData
+
+--Expenses
+Insert into dbo.Expenses(EmployeeNumber,BusinessTravel,TrainingTimesLastYear,StockOptionLevel)
+select EmployeeNumber,BusinessTravel,TrainingTimesLastYear,StockOptionLevel from dbo.EmployeeFullData
+
+--Jobs
+Insert into dbo.JobDetails(EmployeeNumber,Department,StandardHours,JobLevel,JobRole)
+select EmployeeNumber,Department,StandardHours,JobLevel,JobRole from dbo.EmployeeFullData
+
+--Payment
+Insert into dbo.Payment(EmployeeNumber,DailyRate,HourlyRate,MonthlyRate,MonthlyIncome,OverTime,PercentSalaryHike)
+select EmployeeNumber,DailyRate,HourlyRate,MonthlyRate,MonthlyIncome,OverTime,PercentSalaryHike from dbo.EmployeeFullData
+
+--Education
+Insert into dbo.EducationDetails(EmployeeNumber,Education,EducationField)
+select EmployeeNumber,Education,EducationField from dbo.EmployeeFullData
